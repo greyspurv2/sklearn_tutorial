@@ -9,7 +9,7 @@ Original author: *Jake VanderPlas*
 This repository contains notebooks and other files associated with my
 [Scikit-learn](http://scikit-learn.org) tutorial.
 
-This _fork_ is by Ian Ozsvald, this contains light edits for Python 3.5+ in 2017 along with some re-ordering. No fundamental changes have been made. Full attribution goes to Jake for writing this tutorial.
+This _fork_ is by Ian Ozsvald, this contains light edits for Python 3.5+ in 2017 along with some re-ordering. No fundamental changes have been made. Full attribution goes to Jake for writing this tutorial. Slight change below to the `conda` setup. The most relevant of Jake's videos to this tutorial seems to be from PyCon 2015: https://www.youtube.com/watch?v=L7R4HUQ-eQ0
 
 ## Installation Notes
 This tutorial requires the following packages:
@@ -27,7 +27,10 @@ I suggest downloading and installing [miniconda](http://conda.pydata.org/minicon
 
 Once this is installed, the following command will install all required packages in your Python environment:
 ```
-$ conda install numpy scipy matplotlib scikit-learn ipython-notebook seaborn
+$ conda create -n cluj_training_day python=3.5 numpy scipy matplotlib scikit-learn jupyter seaborn
+$ source activate cluj_training_day
+$ jupyter notebook # will start a web browser-based Notebook
+
 ```
 
 Alternatively, you can download and install the (very large) Anaconda software distribution, found at https://store.continuum.io/.
