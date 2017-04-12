@@ -1,6 +1,6 @@
 # Scikit-learn Tutorial
 
-*Jake VanderPlas*
+Original author: *Jake VanderPlas*
 
 - email: <jakevdp@uw.edu>
 - twitter: [@jakevdp](https://twitter.com/jakevdp)
@@ -8,6 +8,8 @@
 
 This repository contains notebooks and other files associated with my
 [Scikit-learn](http://scikit-learn.org) tutorial.
+
+This _fork_ is by Ian Ozsvald, this contains light edits for Python 3.5+ in 2017 along with some re-ordering. No fundamental changes have been made. Full attribution goes to Jake for writing this tutorial.
 
 ## Installation Notes
 This tutorial requires the following packages:

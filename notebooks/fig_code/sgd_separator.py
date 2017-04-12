@@ -22,7 +22,8 @@ def plot_sgd_separator():
     for (i, j), val in np.ndenumerate(X1):
         x1 = val
         x2 = X2[i, j]
-        p = clf.decision_function([x1, x2])
+        decision_function_array = np.array([x1, x2]).reshape(1, -1) # e.g. [[-1.0, -1.0]]
+        p = clf.decision_function(decision_function_array)        
         Z[i, j] = p[0]
     levels = [-1.0, 0.0, 1.0]
     linestyles = ['dashed', 'solid', 'dashed']
