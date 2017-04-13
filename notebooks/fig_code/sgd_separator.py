@@ -16,15 +16,18 @@ def plot_sgd_separator():
     # plot the line, the points, and the nearest vectors to the plane
     xx = np.linspace(-1, 5, 10)
     yy = np.linspace(-1, 5, 10)
+    # e.g.
+    # array([-1.        , -0.33333333,  0.33333333,  1.        ,  1.66666667,
+    #    2.33333333,  3.        ,  3.66666667,  4.33333333,  5.        ])
 
-    X1, X2 = np.meshgrid(xx, yy)
+    X1, X2 = np.meshgrid(xx, yy) # make 2 lists comprising all 2D co-ordinate pairs
     Z = np.empty(X1.shape)
     for (i, j), val in np.ndenumerate(X1):
         x1 = val
         x2 = X2[i, j]
         decision_function_array = np.array([x1, x2]).reshape(1, -1) # e.g. [[-1.0, -1.0]]
         p = clf.decision_function(decision_function_array)        
-        Z[i, j] = p[0]
+        Z[i, j] = p[0] # confidence scores for sample (signed distance to hyperplane for each sample)
     levels = [-1.0, 0.0, 1.0]
     linestyles = ['dashed', 'solid', 'dashed']
     colors = 'k'
